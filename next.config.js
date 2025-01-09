@@ -5,6 +5,7 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
     swcMinify: true, // Ensure SWC minification is enabled
   },
+    swcMinify: false, // Disable SWC
   images: {
     remotePatterns: [
       {
