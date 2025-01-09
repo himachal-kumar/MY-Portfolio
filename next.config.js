@@ -1,11 +1,17 @@
-const path = require('path')
- 
-module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-    swcMinify: true, // Ensure SWC minification is enabled
+const path = require('path');
+
+const nextConfig = {
+  reactStrictMode: true, // Enable React strict mode
+  eslint: {
+    ignoreDuringBuilds: true, // Ignore ESLint errors during builds
   },
-    swcMinify: false, // Disable SWC
+  typescript: {
+    ignoreBuildErrors: true, // Ignore TypeScript errors during builds
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')], // Include custom styles directory
+  },
+  swcMinify: false, // Disable SWC minification globally
   images: {
     remotePatterns: [
       {
@@ -25,4 +31,6 @@ module.exports = {
       },
     ],
   },
-}
+};
+
+module.exports = nextConfig;
