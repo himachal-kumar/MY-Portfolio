@@ -3,6 +3,7 @@ const path = require('path')
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
+    swcMinify: true, // Ensure SWC minification is enabled
   },
   images: {
     remotePatterns: [
